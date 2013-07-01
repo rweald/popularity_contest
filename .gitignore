@@ -1,0 +1,10 @@
+# OSX
+.DS_Store
+
+# SBT
+target/
+
+# IDEA
+.idea/
+.idea_modules/
+
