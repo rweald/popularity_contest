@@ -1,0 +1,31 @@
+!tape
+name: YouTubeVideo.apply
+interactions:
+- recorded: 2013-07-02T17:38:49.820Z
+  request:
+    method: GET
+    uri: http://gdata.youtube.com/feeds/api/videos/5hWIr9_noRo?v=2&alt=jsonc
+    headers:
+      Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+      Host: gdata.youtube.com
+      Proxy-Connection: keep-alive
+      User-Agent: Java/1.6.0_51
+  response:
+    status: 200
+    headers:
+      Access-Control-Allow-Origin: '*'
+      Cache-Control: private, max-age=300, no-transform
+      Content-Type: application/json; charset=UTF-8
+      Date: Tue, 02 Jul 2013 17:38:45 GMT
+      ETag: W/"D0UMQH47eCp7I2A9WhFRFkU."
+      Expires: Tue, 02 Jul 2013 17:38:45 GMT
+      GData-Version: '2.1'
+      Last-Modified: Mon, 01 Jul 2013 13:28:01 GMT
+      Server: GSE
+      Vary: '*'
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      X-GData-User-Country: US
+      X-XSS-Protection: 1; mode=block
+    body: '{"apiVersion":"2.1","data":{"id":"5hWIr9_noRo","uploaded":"2007-06-23T19:03:27.000Z","updated":"2013-07-01T13:28:01.000Z","uploader":"richmonkey4","category":"Entertainment","title":"Good will hunting job interview","description":"clip from good will
+      hunting movie","thumbnail":{"sqDefault":"http://i1.ytimg.com/vi/5hWIr9_noRo/default.jpg","hqDefault":"http://i1.ytimg.com/vi/5hWIr9_noRo/hqdefault.jpg"},"player":{"default":"http://www.youtube.com/watch?v=5hWIr9_noRo&feature=youtube_gdata_player","mobile":"http://m.youtube.com/details?v=5hWIr9_noRo"},"content":{"5":"http://www.youtube.com/v/5hWIr9_noRo?version=3&f=videos&app=youtube_gdata","1":"rtsp://r20---sn-o097znll.c.youtube.com/CiILENy73wIaGQkaoeffr4gV5hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp","6":"rtsp://r20---sn-o097znll.c.youtube.com/CiILENy73wIaGQkaoeffr4gV5hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp"},"duration":96,"aspectRatio":"widescreen","rating":4.772429,"likeCount":"431","ratingCount":457,"viewCount":517851,"favoriteCount":0,"commentCount":295,"accessControl":{"comment":"allowed","commentVote":"allowed","videoRespond":"allowed","rate":"allowed","embed":"allowed","list":"allowed","autoPlay":"allowed","syndicate":"allowed"}}}'
