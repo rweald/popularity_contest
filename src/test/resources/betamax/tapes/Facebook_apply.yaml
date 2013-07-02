@@ -1,0 +1,25 @@
+!tape
+name: Facebook.apply
+interactions:
+- recorded: 2013-07-02T23:22:30.927Z
+  request:
+    method: GET
+    uri: http://graph.facebook.com/?id=http%3A%2F%2Fwww.google.com
+    headers:
+      Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+      Host: graph.facebook.com
+      Proxy-Connection: keep-alive
+      User-Agent: Java/1.6.0_51
+  response:
+    status: 200
+    headers:
+      Access-Control-Allow-Origin: '*'
+      Cache-Control: private, no-cache, no-store, must-revalidate
+      Content-Type: application/json; charset=UTF-8
+      Date: Tue, 02 Jul 2013 23:22:15 GMT
+      ETag: '"6b63560e4ff65349d2517b0f6d0dd6e1f5b79425"'
+      Expires: Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma: no-cache
+      X-FB-Debug: 2CTnf+3FG0DP8WQgM2X1gFAuntZigfVGL61U8tqDmaU=
+      X-FB-Rev: '863722'
+    body: '{"id":"http:\/\/www.google.com","shares":6620203,"comments":2}'
