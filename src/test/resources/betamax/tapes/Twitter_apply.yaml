@@ -1,0 +1,22 @@
+!tape
+name: Twitter.apply
+interactions:
+- recorded: 2013-07-02T21:42:39.180Z
+  request:
+    method: GET
+    uri: http://urls.api.twitter.com/1/urls/count.json?url=http%3A%2F%2Fwww.buzzfeed.com%2Fdespicableme2%2F15-reasons-we-wish-we-were-steve-carell%2F
+    headers:
+      Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+      Host: urls.api.twitter.com
+      Proxy-Connection: keep-alive
+      User-Agent: Java/1.6.0_51
+  response:
+    status: 200
+    headers:
+      Cache-Control: must-revalidate, max-age=900
+      Content-Type: application/json;charset=utf-8
+      Date: Tue, 02 Jul 2013 21:42:27 GMT
+      Expires: Tue, 02 Jul 2013 21:57:27 GMT
+      Last-Modified: Tue, 02 Jul 2013 21:42:27 GMT
+      Server: tfe
+    body: '{"count":29,"url":"http:\/\/www.buzzfeed.com\/despicableme2\/15-reasons-we-wish-we-were-steve-carell\/"}'
