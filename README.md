@@ -2,15 +2,15 @@
 
 Follow along on [Trello](https://trello.com/board/popularity-contest/51d0fb957e25710b780025ff).
 
-## It's A Popularity Contest ಠ_ಠ
+## It's A Popularity Contest └[∵┌]└[ ∵ ]┘[┐∵]┘
 
 TBD
 
-## Installation ＼(＾O＾)／
+## Installation ヾ(⌐■_■)ノ♪
 
 TBD
 
-## Contributing ヾ(⌐■_■)ノ♪
+## Contributing ＼(＾O＾)／
 This project comes with an SBT wrapper script that will automatically download the correct version of SBT and Scala. All you have to do is running the following command from the root of the project
 
 ```
