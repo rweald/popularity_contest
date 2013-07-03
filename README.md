@@ -1,16 +1,36 @@
 [![Build Status](https://secure.travis-ci.org/rslifka/popularity_contest.png)](http://travis-ci.org/rslifka/popularity_contest)
 
-Follow along on [Trello](https://trello.com/board/popularity-contest/51d0fb957e25710b780025ff).
+## It's A Popularity Contest! └[∵┌]└[ ∵ ]┘[┐∵]┘
 
-## It's A Popularity Contest └[∵┌]└[ ∵ ]┘[┐∵]┘
+"Popularity Contest" is a tiny Scala project we created while building our multifactored Content Quality Scoring algorithm, primarily to experiment with integration testing of API (specifically JSON) endpoints.  We blogged about it [UPDATE BLOG LINK](http://www.sharethrough.com/engineering)!
 
-TBD
+Use PC to find out social activity data around YouTube videos and URLs shared on Facebook and Twitter.
 
 ## Installation ヾ(⌐■_■)ノ♪
 
-TBD
+(Currently waiting on approval from hosting via Sonatype)
+
+## Usage (~^.^)~
+
+    import com.sharethrough.popularity_contest._
+
+    object PopularityExercise extends App {
+
+      val fb = Facebook("http://www.google.com")
+      println("Graphing: %s, Shares: %d, Comments: %d".format(fb.id, fb.shares, fb.comments))
+
+      val tw = Twitter("http://www.sharethrough.com/")
+      println("Tweeting: %s, Tweets: %d".format(tw.url, tw.tweets))
+
+      val yt = YouTubeVideo("LXxjEYIANS4")
+      println("Viewing: %s, Views: %d, Rating: %f, Ratings: %d, Likes: %d, Favorites: %d, Comments: %d".format(yt.id, yt.views, yt.rating, yt.ratings, yt.likes, yt.favorites, yt.comments))
+      
+    }
 
 ## Contributing ＼(＾O＾)／
+
+Follow along with priorities (and drop some of your own!) on [Trello](https://trello.com/board/popularity-contest/51d0fb957e25710b780025ff).
+
 This project comes with an SBT wrapper script that will automatically download the correct version of SBT and Scala. All you have to do is running the following command from the root of the project
 
 ```
@@ -25,7 +45,7 @@ This will fire up the SBT repl where you can begin issuing commands. For example
 
 ## License (°ロ°)☝
 
-    Copyright 2011-2013 Robert Slifka, Ryan Weald
+    Copyright 2013 Robert Slifka, Ryan Weald
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
