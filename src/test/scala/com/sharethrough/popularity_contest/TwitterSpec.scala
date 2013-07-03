@@ -1,4 +1,4 @@
-package com.robslifka.popularity_contest
+package com.sharethrough.popularity_contest
 
 import org.specs2.mutable._
 import co.freeside.betamax.Recorder

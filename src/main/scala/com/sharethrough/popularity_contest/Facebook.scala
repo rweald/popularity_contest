@@ -1,4 +1,4 @@
-package com.robslifka.popularity_contest
+package com.sharethrough.popularity_contest
 
 import net.liftweb.json._
 import java.net.URLEncoder
