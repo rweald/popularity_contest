@@ -2,14 +2,16 @@
 
 ## It's A Popularity Contest! └[∵┌]└[ ∵ ]┘[┐∵]┘
 
-"Popularity Contest" is a tiny Scala project we created while building our multifactored Content Quality Scoring algorithm, primarily to experiment with integration testing of API (specifically JSON) endpoints.  We blogged about it [UPDATE BLOG LINK](http://www.sharethrough.com/engineering)!
+"Popularity Contest" is a tiny Scala project we created while building our multifactored Content Quality Scoring algorithm, primarily to experiment with integration testing of API (specifically JSON) endpoints.  We wrote about it on the [Sharethrough Engineering blog](http://www.sharethrough.com/2013/07/integration-testing-http-requests-with-scala-and-betamax/).
 
 Use PC to find out social activity data around YouTube videos and URLs shared on Facebook and Twitter.
 
 ## Installation ヾ(⌐■_■)ノ♪
 
-(Currently waiting on approval from hosting via Sonatype)
+Hosted on Sonatype, via SBT:
 
+    "com.sharethrough" %% "popularity_contest" % "0.9"
+        
 ## Usage (~^.^)~
 
     import com.sharethrough.popularity_contest._
