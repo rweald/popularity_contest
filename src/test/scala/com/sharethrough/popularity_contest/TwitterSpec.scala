@@ -1,10 +1,9 @@
 package com.sharethrough.popularity_contest
 
-import org.specs2.mutable._
 import co.freeside.betamax.Recorder
 import co.freeside.betamax.proxy.jetty.ProxyServer
 
-class TwitterSpec extends Specification {
+class TwitterSpec extends SequentialSpecification {
 
   ".apply" should {
     "fetch and parse JSON from the Twitter endpoint" in {
