@@ -1,6 +1,8 @@
 package com.sharethrough.popularity_contest
 
-class TwitterSpec extends SequentialSpecification {
+import org.specs2.mutable.Specification
+
+class TwitterSpec extends Specification {
 
   ".apply" should {
 

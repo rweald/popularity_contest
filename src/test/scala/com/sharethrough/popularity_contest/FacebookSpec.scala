@@ -1,6 +1,8 @@
 package com.sharethrough.popularity_contest
 
-class FacebookSpec extends SequentialSpecification {
+import org.specs2.mutable.Specification
+
+class FacebookSpec extends Specification {
 
   ".apply" should {
 

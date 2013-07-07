@@ -1,6 +1,8 @@
 package com.sharethrough.popularity_contest
 
-class YouTubeVideoSpec extends SequentialSpecification {
+import org.specs2.mutable.Specification
+
+class YouTubeVideoSpec extends Specification {
 
   ".apply" should {
     "fetch and parse JSON from the YT endpoint" in {

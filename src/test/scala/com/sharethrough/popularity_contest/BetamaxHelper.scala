@@ -14,17 +14,21 @@ object BetamaxHelper {
    */
   def withTape(tapeName:String, functionUnderTest:() => Any) = {
 
-    val recorder = new Recorder
-    val proxyServer = new ProxyServer(recorder)
+    synchronized {
 
-    recorder.insertTape(tapeName)
-    proxyServer.start()
+      val recorder = new Recorder
+      val proxyServer = new ProxyServer(recorder)
 
-    try {
-      functionUnderTest()
-    } finally {
-      recorder.ejectTape()
-      proxyServer.stop()
+      recorder.insertTape(tapeName)
+      proxyServer.start()
+
+      try {
+        functionUnderTest()
+      } finally {
+        recorder.ejectTape()
+        proxyServer.stop()
+      }
+
     }
 
   }
