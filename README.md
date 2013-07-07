@@ -10,7 +10,7 @@ Use PC to find out social activity data around YouTube videos and URLs shared on
 
 Hosted on Sonatype, via SBT:
 
-    "com.sharethrough" %% "popularity_contest" % "0.9"
+    "com.sharethrough" %% "popularity_contest" % "1.0"
         
 ## Usage (~^.^)~
 
