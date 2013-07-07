@@ -14,13 +14,6 @@ libraryDependencies ++= Seq(
 )
 
 /*
-  Since we're running a proxy server for our integration examples, and only
-  one proxy server can be running at a time, let's forgo coordinating that
-  complexity and simply run our specs sequentially.
-*/
-parallelExecution in Test := false
-
-/*
   Per the SBT-to-Sonatype publishing guidelines located here:
     http://www.scala-sbt.org/0.12.3/docs/Community/Using-Sonatype.html
 */
