@@ -2,7 +2,7 @@ organization := "com.sharethrough"
 
 name := "popularity_contest"
 
-version := "0.9"
+version := "1.0"
 
 scalaVersion := "2.10.2"
 
