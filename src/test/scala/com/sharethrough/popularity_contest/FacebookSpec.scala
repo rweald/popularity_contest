@@ -1,42 +1,31 @@
 package com.sharethrough.popularity_contest
 
-import co.freeside.betamax.Recorder
-import co.freeside.betamax.proxy.jetty.ProxyServer
-
 class FacebookSpec extends SequentialSpecification {
 
   ".apply" should {
+
     "fetch and parse JSON from the FB endpoint" in {
-      val recorder = new Recorder
-      val proxyServer = new ProxyServer(recorder)
+      val url = "http://www.google.com"
 
-      recorder.insertTape("Facebook.apply")
-      proxyServer.start()
+      var fb:Facebook = null
+      BetamaxHelper.withTape("Facebook.apply", () => {
+        fb = Facebook(url)
+      })
 
-      val fbState = Facebook("http://www.google.com")
-
-      recorder.ejectTape()
-      proxyServer.stop()
-
-      fbState.id       must_== "http://www.google.com"
-      fbState.shares   must_== 6620203
-      fbState.comments must_== 2
+      fb.id       must_== url
+      fb.shares   must_== 6620203
+      fb.comments must_== 2
     }
 
     "provide comments:0 when there are no comments in the resultings JSON" in {
-      val recorder = new Recorder
-      val proxyServer = new ProxyServer(recorder)
+      val url = "http://www.allaboutbalance.com"
 
-      recorder.insertTape("Facebook.noComments")
-      proxyServer.start()
+      var fb:Facebook = null
+      BetamaxHelper.withTape("Facebook.noComments", () => {
+        fb = Facebook(url)
+      })
 
-      try {
-        val fbState = Facebook("http://www.allaboutbalance.com")
-        fbState.comments must_== 0
-      } finally {
-        recorder.ejectTape()
-        proxyServer.stop()
-      }
+      fb.comments must_== 0
     }
   }
 }

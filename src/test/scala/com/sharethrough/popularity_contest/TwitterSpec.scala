@@ -1,26 +1,19 @@
 package com.sharethrough.popularity_contest
 
-import co.freeside.betamax.Recorder
-import co.freeside.betamax.proxy.jetty.ProxyServer
-
 class TwitterSpec extends SequentialSpecification {
 
   ".apply" should {
+
     "fetch and parse JSON from the Twitter endpoint" in {
-      val recorder = new Recorder
-      val proxyServer = new ProxyServer(recorder)
-
-      recorder.insertTape("Twitter.apply")
-      proxyServer.start()
-
       val url = "http://www.buzzfeed.com/despicableme2/15-reasons-we-wish-we-were-steve-carell/"
-      val twitterStats = Twitter(url)
 
-      recorder.ejectTape()
-      proxyServer.stop()
+      var tw:Twitter = null
+      BetamaxHelper.withTape("Twitter.apply", () => {
+        tw = Twitter(url)
+      })
 
-      twitterStats.url    must_== url
-      twitterStats.tweets must_== 29
+      tw.url    must_== url
+      tw.tweets must_== 29
     }
   }
 }
