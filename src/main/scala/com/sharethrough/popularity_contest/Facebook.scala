@@ -3,7 +3,9 @@ package com.sharethrough.popularity_contest
 import net.liftweb.json._
 import java.net.URLEncoder
 
-case class Facebook private (id:String, shares:Long, comments:Long)
+case class Facebook private (id:String, shares:Long, comments:Long) {
+  def this(id:String, shares:Long) = this(id, shares, 0)
+}
 
 object Facebook {
 

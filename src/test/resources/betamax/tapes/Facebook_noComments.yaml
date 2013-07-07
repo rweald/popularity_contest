@@ -1,0 +1,25 @@
+!tape
+name: Facebook.noComments
+interactions:
+- recorded: 2013-07-07T01:45:05.811Z
+  request:
+    method: GET
+    uri: http://graph.facebook.com/?id=http%3A%2F%2Fwww.allaboutbalance.com
+    headers:
+      Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+      Host: graph.facebook.com
+      Proxy-Connection: keep-alive
+      User-Agent: Java/1.6.0_51
+  response:
+    status: 200
+    headers:
+      Access-Control-Allow-Origin: '*'
+      Cache-Control: private, no-cache, no-store, must-revalidate
+      Content-Type: application/json; charset=UTF-8
+      Date: Sun, 07 Jul 2013 01:45:03 GMT
+      ETag: '"482a32c9cdc0f63a6bd111c1c9d3bcf7e65802af"'
+      Expires: Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma: no-cache
+      X-FB-Debug: jUTToC2sKaxHxViYBNzLrTLyvTwhDc5j09Z8V9Mzovw=
+      X-FB-Rev: '865982'
+    body: '{"id":"http:\/\/www.allaboutbalance.com","shares":1}'
