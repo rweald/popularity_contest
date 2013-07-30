@@ -9,3 +9,4 @@ target/
 .idea_modules/
 *.iml
 
+sbt-launch.jar

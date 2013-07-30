@@ -3,6 +3,8 @@ package com.sharethrough.popularity_contest
 import co.freeside.betamax.Recorder
 import co.freeside.betamax.proxy.jetty.ProxyServer
 
+class InvalidFunctionException extends Exception
+
 object BetamaxHelper {
 
   /**
@@ -12,7 +14,7 @@ object BetamaxHelper {
    * @param tapeName Name of the tape to insert
    * @param functionUnderTest Function to execute
    */
-  def withTape(tapeName:String, functionUnderTest:() => Any) = {
+  def withTape[T](tapeName:String, functionUnderTest: => T): T = {
 
     synchronized {
 
@@ -22,13 +24,14 @@ object BetamaxHelper {
       recorder.insertTape(tapeName)
       proxyServer.start()
 
-      try {
-        functionUnderTest()
+      val response: T = try {
+        functionUnderTest
       } finally {
         recorder.ejectTape()
         proxyServer.stop()
       }
 
+      response
     }
 
   }
