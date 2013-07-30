@@ -8,18 +8,17 @@ class YouTubeVideoSpec extends Specification {
     "fetch and parse JSON from the YT endpoint" in {
       val videoId = "5hWIr9_noRo"
 
-      var yt:YouTubeVideo = null
-      BetamaxHelper.withTape("YouTubeVideo.apply", () => {
-        yt = YouTubeVideo(videoId)
+      val result = BetamaxHelper.withTape[YouTubeVideo]("YouTubeVideo.apply", {
+        YouTubeVideo(videoId)
       })
 
-      yt.id        must_== videoId
-      yt.views     must_== 517851
-      yt.rating    must    beCloseTo(4.77f, 0.1f)
-      yt.ratings   must_== 457
-      yt.likes     must_== 431
-      yt.favorites must_== 0
-      yt.comments  must_== 295
+      result.id        must_== videoId
+      result.views     must_== 517851
+      result.rating    must    beCloseTo(4.77f, 0.1f)
+      result.ratings   must_== 457
+      result.likes     must_== 431
+      result.favorites must_== 0
+      result.comments  must_== 295
     }
   }
 }

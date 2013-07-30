@@ -9,25 +9,23 @@ class FacebookSpec extends Specification {
     "fetch and parse JSON from the FB endpoint" in {
       val url = "http://www.google.com"
 
-      var fb:Facebook = null
-      BetamaxHelper.withTape("Facebook.apply", () => {
-        fb = Facebook(url)
+      val result = BetamaxHelper.withTape[Facebook]("Facebook.apply", {
+        Facebook(url)
       })
 
-      fb.id       must_== url
-      fb.shares   must_== 6620203
-      fb.comments must_== 2
+      result.id       must_== url
+      result.shares   must_== 6620203
+      result.comments must_== 2
     }
 
     "provide comments:0 when there are no comments in the resultings JSON" in {
       val url = "http://www.allaboutbalance.com"
 
-      var fb:Facebook = null
-      BetamaxHelper.withTape("Facebook.noComments", () => {
-        fb = Facebook(url)
+      val result = BetamaxHelper.withTape[Facebook]("Facebook.noComments", {
+        Facebook(url)
       })
 
-      fb.comments must_== 0
+      result.comments must_== 0
     }
   }
 }
